@@ -65,13 +65,16 @@ h1 {
 
 h3 {
   font-style: italic;
-  font-size: 1em;
+  font-size: 1.75vw;
+  min-width: 50px;
   margin-top: 18vh;
 }
 
 h4 {
-  margin: 0;
-  font-size: 3vw;
+  margin: 0 auto;
+  padding: 0 1vw;
+  text-align: center;
+  font-size: 2.5vw;
   font-weight: bold;
 }
 
@@ -87,7 +90,6 @@ h4 {
   border-radius: 8px;
   padding: 2vh 5vw;
 }
-
 
 .hidden {
   display: none;
