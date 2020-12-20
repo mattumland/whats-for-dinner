@@ -51,7 +51,3 @@ function insertFoodText(foodText) {
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
-
-
-// if meal
-//
