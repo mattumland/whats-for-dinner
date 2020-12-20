@@ -9,7 +9,7 @@ cookButton.addEventListener('click', function() {
     var foodText = buildFullMeal();
   }
   else {
-    var foodText = buildFoodText(foodList);
+    var foodText = buildOneDish(foodList);
   }
   insertFoodText(foodText);
 });
@@ -37,7 +37,7 @@ function buildFullMeal() {
         <h4 class="food-idea-display">${mainMeal} with a side of ${sideMeal} and ${dessertMeal} for dessert!</h4>`;
 }
 
-function buildFoodText(foodType) {
+function buildOneDish(foodType) {
   var foodName = foodType[getRandomIndex(foodType)];
   return `<h3 class="food-idea-display">You should make:</h3>
         <h4 class="food-idea-display">${foodName}!</h4>`;
@@ -51,7 +51,3 @@ function insertFoodText(foodText) {
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
-
-
-// if meal
-//
