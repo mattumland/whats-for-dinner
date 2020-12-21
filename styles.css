@@ -6,10 +6,14 @@ body {
     margin: 0;
 }
 
-header {
-  padding-top: 1.5px;
-  padding-bottom: 1.5px;
-  padding-left: 25px;
+.top-bar {
+  display:flex;
+  justify-content: space-between;
+}
+
+.add-recipe {
+  margin-right: 10px;
+  padding: 7px 3px 7px 3px;
 }
 
 .teal-background{
@@ -19,10 +23,10 @@ header {
 .main-display{
   display: flex;
   justify-content: space-around;
-  margin-top: 60px;
 }
 
 .menu-box {
+  margin-top: 60px;
   width: 33vw;
   height: 50vh;
   min-height: 340px;
@@ -46,6 +50,12 @@ h1 {
   font-weight: bolder;
 }
 
+h2 {
+  padding-top: 1.5px;
+  padding-bottom: 1.5px;
+  padding-left: 25px;
+}
+
 .menu-box-image {
   display: flex;
   margin: 0 auto;
@@ -62,16 +72,16 @@ h1 {
 
 h3 {
   font-style: italic;
-  font-size: 1.75vw;
+  font-size: 1.5vw;
   min-width: 50px;
-  margin-top: 18vh;
+  margin-top: 16vh;
 }
 
 h4 {
   margin: 0 auto;
   padding: 0 1vw;
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 2vw;
   font-weight: bold;
 }
 
@@ -91,6 +101,3 @@ h4 {
 .hidden {
   display: none;
 }
-
-
-/* grey - #95a5a6; */

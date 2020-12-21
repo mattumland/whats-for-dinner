@@ -1,9 +1,13 @@
 var cookButton = document.querySelector(".lets-cook");
 var potImage = document.querySelector(".menu-box-image");
+var addButton = document.querySelector(".add-recipe");
 
 cookButton.addEventListener('click', function() {
-  potImage.classList.toggle("hidden");
   var foodType = document.querySelector(`input[type="radio"]:checked`);
+  if ((foodType) === null) {
+    return;
+  }
+  potImage.classList.toggle("hidden");
   var foodList = grabArray(foodType.value);
   if (foodList === 'meal') {
     var foodText = buildFullMeal();
@@ -36,6 +40,8 @@ function buildFullMeal() {
   return `<h3 class="food-idea-display">You should make:</h3>
         <h4 class="food-idea-display">${mainMeal} with a side of ${sideMeal} and ${dessertMeal} for dessert!</h4>`;
 }
+
+// refactor - buildFoodText checks the value passed
 
 function buildOneDish(foodType) {
   var foodName = foodType[getRandomIndex(foodType)];

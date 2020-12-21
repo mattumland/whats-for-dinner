@@ -9,6 +9,7 @@ var side = [
   "Shrimp Summer Rolls",
   "Garlic Butter Mushrooms",
   "Hush Puppies",
+  "Hail Satan😈",
 ];
 
 var mains = [
@@ -25,6 +26,7 @@ var mains = [
   "Chicken Fried Rice",
   "Sheet Pan Fajitas",
   "Margarita Pizza",
+  "Hail Satan😈",
 ];
 
 var desserts = [
@@ -46,5 +48,5 @@ var desserts = [
   "Tart Tatin",
   "Croissants",
   "Eclairs",
-  "Hail Satan",
+  "Hail Satan😈",
 ];
