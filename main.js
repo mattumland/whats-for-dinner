@@ -10,12 +10,12 @@ cookButton.addEventListener('click', function() {
   potImage.classList.toggle("hidden");
   var foodList = grabArray(foodType.value);
   if (foodList === 'meal') {
-    var foodText = buildFullMeal();
+    var mealText = buildFullMeal();
   }
   else {
-    var foodText = buildOneDish(foodList);
+    var mealText = buildOneDish(foodList);
   }
-  insertFoodText(foodText);
+  insertFoodText(mealText);
 });
 
 function grabArray(foodType) {
@@ -37,21 +37,18 @@ function buildFullMeal() {
   var sideMeal = side[getRandomIndex(side)];
   var mainMeal = mains[getRandomIndex(mains)];
   var dessertMeal = desserts[getRandomIndex(desserts)];
-  return `<h3 class="food-idea-display">You should make:</h3>
-        <h4 class="food-idea-display">${mainMeal} with a side of ${sideMeal} and ${dessertMeal} for dessert!</h4>`;
+  return `<h4 class="food-idea-display">${mainMeal} with a side of ${sideMeal} and ${dessertMeal} for dessert!</h4>`;
 }
-
-// refactor - buildFoodText checks the value passed
 
 function buildOneDish(foodType) {
   var foodName = foodType[getRandomIndex(foodType)];
-  return `<h3 class="food-idea-display">You should make:</h3>
-        <h4 class="food-idea-display">${foodName}!</h4>`;
+  return `<h4 class="food-idea-display">${foodName}!</h4>`;
 };
 
 function insertFoodText(foodText) {
+  var mealMessage = `<h3 class="food-idea-display">You should make:</h3> ${foodText}`
   var messageLocation = document.querySelector("#messageLocation");
-  messageLocation.innerHTML = foodText;
+  messageLocation.innerHTML = mealMessage;
 };
 
 function getRandomIndex(array) {
